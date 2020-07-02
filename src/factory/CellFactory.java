@@ -3,6 +3,7 @@ package factory;
 import object.Cell;
 
 /**
+ * Cell的工厂类，作用是返回一个Cell类
  * Created by lero on 2020/6/30.
  */
 public class CellFactory {
@@ -11,6 +12,17 @@ public class CellFactory {
     public CellFactory() {
     }
 
+    /**
+     * 根据Cell的行号，列号，左上角的实际坐标号和Cell的标号及其地图单位长度
+     * 采用工厂模式创建Cell对象
+     * @param row
+     * @param column
+     * @param x
+     * @param y
+     * @param num
+     * @param length
+     * @return
+     */
     public Cell CreateCell(int row, int column, int x, int y, int num, int length) {
         cell = new Cell(row,column,x,y,length);
         cell.setNum(num);
