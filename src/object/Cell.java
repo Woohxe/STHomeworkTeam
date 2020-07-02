@@ -18,6 +18,17 @@ public class Cell {
     //length为单位长度
     private int length;
 
+    /**
+     * 构造方法
+     * @param row
+     * @param column
+     * @param x
+     * @param y
+     * @param height
+     * @param width
+     * @param num
+     * @param length
+     */
     public Cell(int row, int column, int x, int y, int height, int width, int num, int length) {
         this.row = row;
         this.column = column;

@@ -4,14 +4,26 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * 计时模式下的记录对象，实现Comparable接口以互相比较
  * Created by lero on 2020/7/2.
  */
 public class TimeModeRecord implements Comparable<TimeModeRecord> {
+    //用户名
     private String name;
+    //关卡编号
     private int MapId;
+    //所用时长
     private int second;
+    //提交时间
     private String curDate;
 
+    /**
+     * 构造方法
+     * @param name
+     * @param mapId
+     * @param second
+     * @param curDate
+     */
     public TimeModeRecord(String name, int mapId, int second, String curDate) {
         this.name = name;
         MapId = mapId;
@@ -19,10 +31,17 @@ public class TimeModeRecord implements Comparable<TimeModeRecord> {
         this.curDate = curDate;
     }
 
+    /**
+     * 提交时生成的记录，提交时间自动记为当前时间
+     * @param name
+     * @param mapId
+     * @param second
+     */
     public TimeModeRecord(String name, int mapId, int second) {
         this.name = name;
         MapId = mapId;
 
+        //获取当前时间，并转为形如yyyy-MM-dd HH:mm:ss的字符串
         Date currentTime = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateString = formatter.format(currentTime);
@@ -66,7 +85,11 @@ public class TimeModeRecord implements Comparable<TimeModeRecord> {
         this.curDate = curDate;
     }
 
-
+    /**
+     * 比较原则为用时短的在前
+     * @param record
+     * @return
+     */
     public int compareTo(TimeModeRecord record) {
         if(this.second > record.second) {
             return 1;
