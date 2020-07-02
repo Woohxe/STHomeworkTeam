@@ -13,6 +13,7 @@ import java.util.Date;
 
 public class GameTimer extends JPanel {
     public final Label lab;
+    protected SimpleDateFormat formatter;
     final Timer timer;
     Date now = new Date();
 
@@ -22,6 +23,10 @@ public class GameTimer extends JPanel {
 
     public Timer getTimer() {
         return timer;
+    }
+
+    public int getTotalTime() {
+        return now.getHours()*3600+now.getMinutes()*60+now.getSeconds();
     }
 
     public GameTimer() {
@@ -36,7 +41,7 @@ public class GameTimer extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 Date now2 = new Date(now.getTime() + 1000);
                 now = now2;
-                SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+                formatter = new SimpleDateFormat("HH:mm:ss");
                 lab.setText(formatter.format(now));
             }
         });

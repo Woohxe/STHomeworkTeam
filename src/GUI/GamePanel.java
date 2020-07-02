@@ -13,6 +13,7 @@ public class GamePanel extends JPanel{
     private GamePanel1 gamePanel1;
     private GamePanel2 gamePanel2;
     private MainFrame mainFrame;
+    private GameStatus gameStatus;
     private JButton go;
     public int BASELENGTH = 150; // 单位块长度
 
@@ -26,6 +27,14 @@ public class GamePanel extends JPanel{
 
     public MainFrame getMainFrame() {
         return (MainFrame) this.getParent();
+    }
+
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
     }
 
     public GamePanel1 getGamePanel1() {
@@ -45,19 +54,21 @@ public class GamePanel extends JPanel{
     }
 
 
-    public GamePanel(MainFrame mainFrame){
-        this.mainFrame = mainFrame;
+    public GamePanel(MainFrame mainFrame1){
+        mainFrame = mainFrame1;
         this.setPreferredSize(new Dimension(BASELENGTH*4+20,BASELENGTH*5+50));
         this.setBackground(new Color(198, 241, 245));
         this.setLayout(null);
 
         gamePanel1 = new GamePanel1(this,mainFrame);
-        gamePanel2 = new GamePanel2(this,mainFrame,new GameStatus(new GameConfiguration()));
+        gameStatus = new GameStatus(new GameConfiguration(gamePanel1));
+        gamePanel2 = new GamePanel2(this,mainFrame,gameStatus);
         gamePanel1.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
         gamePanel2.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
         this.add(gamePanel1);
         gamePanel1.setEnabled(true);
         this.add(gamePanel2);
         this.setVisible(true);
+
     }
 }

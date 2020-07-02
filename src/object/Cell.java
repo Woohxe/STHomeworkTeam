@@ -37,6 +37,14 @@ public class Cell {
         this.length = length;
     }
 
+    public Cell(Cell cell,double i) {
+        this.width = (int) (cell.width*i);
+        this.height= (int) (cell.height*i);
+        this.x = (int) (cell.x*i);
+        this.y = (int) (cell.y*i);
+        this.num = cell.num;
+    }
+
     public int getRow() {
         return row;
     }
@@ -99,6 +107,13 @@ public class Cell {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public void setSmaller(double i) {
+        this.height = (int) (this.height*i);
+        this.width = (int) (this.width*i);
+        this.x = (int) (this.x*i);
+        this.y = (int) (this.y*i);
     }
 
     @Override

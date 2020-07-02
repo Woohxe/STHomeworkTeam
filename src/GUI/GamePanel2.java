@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by lero on 2020/6/30.
  */
-public class GamePanel2 extends JPanel implements ActionListener {
+public class GamePanel2 extends JPanel {
     private JButton back;
     private JButton go;
     private GamePanel gamePanel;
@@ -25,6 +25,14 @@ public class GamePanel2 extends JPanel implements ActionListener {
     Color cao = new Color(205, 38, 38);
     Font fnt = new Font("黑体", Font.BOLD, 25);
 
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
+    }
+
     public GamePanel2(GamePanel gamePanel, MainFrame mainFrame, GameStatus gameStatus) {
         this.mainFrame = mainFrame;
         this.gamePanel = gamePanel;
@@ -32,10 +40,9 @@ public class GamePanel2 extends JPanel implements ActionListener {
         int BASELENGTH = gameStatus.getGameConfiguration().getBaseLength();
 
         for(int i = 0; i < 10; i++) {
-
             pl[i] = new PersonLabel(gameStatus.getCells()[i]);
             pl[i].setBorder(new EtchedBorder());
-            dragListener = new DragListener(pl[i],gamePanel,gameStatus);
+            dragListener = new DragListener(pl[i],gamePanel,gameStatus,mainFrame);
             pl[i].addMouseListener(dragListener);
             pl[i].addMouseMotionListener(dragListener);
             pl[i].setBounds(pl[i].getX(),pl[i].getY(),pl[i].getWidth(),pl[i].getHeight());
@@ -48,9 +55,19 @@ public class GamePanel2 extends JPanel implements ActionListener {
         this.setVisible(false);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
+    public void refresh() {
+        this.removeAll();
+        for(int i = 0; i < 10; i++) {
+            pl[i] = new PersonLabel(gameStatus.getCells()[i]);
+            pl[i].setBorder(new EtchedBorder());
+            dragListener = new DragListener(pl[i],gamePanel,gameStatus,mainFrame);
+            pl[i].addMouseListener(dragListener);
+            pl[i].addMouseMotionListener(dragListener);
+            pl[i].setBounds(pl[i].getX(),pl[i].getY(),pl[i].getWidth(),pl[i].getHeight());
+            this.add(pl[i]);
+        }
+        this.validate();
+        this.repaint();
     }
 
     public PersonLabel[] getPl() {

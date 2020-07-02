@@ -1,5 +1,7 @@
 package GUI;
 
+import commons.GameMap;
+import huarongdao.Solver;
 import listener.BeginListener;
 
 import javax.swing.*;
@@ -62,6 +64,8 @@ public class MainFrame extends JFrame {
         this.setVisible(true);//展示窗体
         this.setLocationRelativeTo(null);//居中
         initialize();
+        GameMap.readMap();
+        Solver.solve();
     }
     public void initialize(){
         beginBtn = new JButton("开始游戏");
@@ -90,11 +94,9 @@ public class MainFrame extends JFrame {
         BtnPanel.add(lab);
         container.add(BtnPanel);
 
-        beginBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                nameDialog = new loginDialog(mainFrame);
-            }
-        });
+        BeginListener beginListener = new BeginListener(mainFrame);//开始游戏按钮
+        beginBtn.addMouseListener(beginListener);
+
         ruleBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "游戏规则如下：通过移动各个方块,帮助曹操最大的方块从初始位置移到棋盘最下方中部,从出口逃走。不允许跨越棋子,所有操作在规定框内完成,设法用最少的步数把曹操移到出口。");
@@ -115,8 +117,7 @@ class loginDialog extends JDialog
         JPanel clogin = (JPanel)this.getContentPane();
         clogin.setLayout(null);
 
-        JLabel l1 = new JLabel("创建名字:");
-        JTextField jt = new JTextField(25);
+        JLabel l1 = new JLabel("点击确定开始游戏");
         JButton loginbt = new JButton("确定");
 
         loginbt.addMouseListener(beginListener);
@@ -124,14 +125,12 @@ class loginDialog extends JDialog
         l1.setBounds(40,35,150,100);
         l1.setFont(new Font("隶书",Font.BOLD,25));
 
-        jt.setBounds(160,70,250,35);
 
         loginbt.setFont(new Font("黑体",Font.BOLD,25));
         loginbt.setBounds(175,150,100,50);
         loginbt.setBackground(new Color(139,117,0));
 
         clogin.add(l1);
-        clogin.add(jt);
         clogin.add(loginbt);
 
         clogin.setBackground(new Color(255,228,181));

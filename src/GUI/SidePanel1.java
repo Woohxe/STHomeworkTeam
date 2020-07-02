@@ -1,6 +1,11 @@
 package GUI;
 
+import commons.GameConfiguration;
+import commons.GameStatus;
 import listener.BeginListener;
+import object.Cell;
+import object.TimeModeRecord;
+import utils.TimeRecordReader;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
@@ -17,21 +22,32 @@ public class SidePanel1 extends JPanel implements ActionListener {
     private MainFrame mainFrame;
     private BeginListener beginListener;
     private JPanel tiredPanel, freePanel, rankPanel, returnPanel;
+    private RankDialog rankDialog;
+    private JPanel forePanel;
     public JLabel timeLabel = new JLabel("--:--:--");;
 
-    public SidePanel1(SidePanel sidePanel,MainFrame mainFrame) {
+    public JPanel getForePanel() {
+        return forePanel;
+    }
+
+    public void setForePanel(JPanel forePanel) {
+        this.forePanel = forePanel;
+    }
+
+    public SidePanel1(SidePanel sidePanel, MainFrame mainFrame) {
         this.mainFrame = mainFrame;
         this.sidePanel = sidePanel;
         //预览框
-        JPanel forePanel = new JPanel();
-        forePanel.setPreferredSize(new Dimension(280,350));
+        forePanel = new JPanel();
+        forePanel.setLayout(null);
+        forePanel.setPreferredSize(new Dimension(280,365));
         forePanel.setBorder(new EtchedBorder());
         forePanel.setBackground(new Color(255, 255, 255));
-        forePanel.setLayout(null);
         JLabel foreLable = new JLabel("地图预览：",JLabel.CENTER);
-        foreLable.setBounds(0,0,280,15);
+        foreLable.setBounds(0,345,280,15);
         forePanel.add(foreLable);
         add(forePanel);
+
         //计时模式
         tiredPanel=buildButtonPanel("计时模式", 280, 50);
         add(tiredPanel);
@@ -47,24 +63,38 @@ public class SidePanel1 extends JPanel implements ActionListener {
         this.setEnabled(false);
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("计时模式")||e.getActionCommand().equals("自由模式")) {
             if(e.getActionCommand().equals("计时模式")) {
                 int res=JOptionPane.showConfirmDialog(mainFrame, "点击确认开始计时", "", JOptionPane.YES_NO_OPTION);
                 if(res==JOptionPane.YES_OPTION){//点击“是”后执行这个代码块
-                    sidePanel.getSidePanel2().getTimerCount().refreshTime();
-                    turnPanel();
-                    sidePanel.getSidePanel2().getTimerCount().getTimer().start();
+                    startTimeGame();
                 }
             }
         } else if (e.getActionCommand().equals("查看排行")) {
+            try {
+                int gameId = mainFrame.getGamePanel().getGameStatus().getGameConfiguration().getGameId();
+                rankDialog = new RankDialog(mainFrame,gameId);
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
 
         } else if (e.getActionCommand().equals("返回")) {
             //已在buildButtonPanel特殊说明
         }
 
+    }
+
+    public void startTimeGame() {
+        GamePanel gamePanel = mainFrame.getGamePanel();
+        sidePanel.getSidePanel2().getTimerCount().refreshTime();
+        gamePanel.getGameStatus().getGameConfiguration().initMap();//更新当前关卡的地图
+        gamePanel.getGameStatus().setMapStep(gamePanel.getGameStatus().getGameConfiguration().getMapStep());//更新状态里面的地图
+        gamePanel.getGameStatus().initPanel();//更新cells的位置
+        mainFrame.getGamePanel().getGamePanel2().refresh();//更新界面
+        turnPanel();//切换界面
+        sidePanel.getSidePanel2().getTimerCount().getTimer().start();
     }
 
     //创建按钮

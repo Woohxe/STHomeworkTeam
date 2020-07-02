@@ -3,6 +3,8 @@ package listener;
 import GUI.GamePanel;
 import GUI.MainFrame;
 import GUI.SidePanel;
+import commons.GameMap;
+import huarongdao.Solver;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
@@ -28,8 +30,9 @@ public class BeginListener extends MouseInputAdapter {
         JButton button = (JButton) e.getSource();
         JPanel BtnPanel = new JPanel();
         String text = button.getText();
-        if (text == "确定") {//开始游戏里面的“确定”
-            mainFrame.getNameDialog().setVisible(false);
+        if (text == "开始游戏") {//开始游戏里面的“开始游戏”
+            //初始化
+            //mainFrame.getNameDialog().setVisible(false);
             BtnPanel = mainFrame.getBtnPanel();
         }
         if(text == "返回") {//地图选择里面的“返回”

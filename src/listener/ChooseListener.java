@@ -30,12 +30,12 @@ public class ChooseListener extends MouseInputAdapter {
         JButton button = (JButton) e.getSource();
         String text = button.getText();
         if (text == "选择关卡") {
-            mainFrame.setGamePanel(gamePanel);
             mainFrame.setSidePanel(sidePanel);
+            mainFrame.setGamePanel(gamePanel);
             mainFrame.remove(mainFrame.getBtnPanel());
             // 重复的按开始按钮：首先必须清除上面的组件
-            mainFrame.add(gamePanel, BorderLayout.CENTER);//添加游戏主面板到内置容器
             mainFrame.add(sidePanel,BorderLayout.WEST);//添加游戏辅助面板到内置容器
+            mainFrame.add(gamePanel, BorderLayout.CENTER);//添加游戏主面板到内置容器
             JButton returnBtn = new JButton("返回");
             BeginListener beginListener = new BeginListener(mainFrame);
             returnBtn.addMouseListener(beginListener);

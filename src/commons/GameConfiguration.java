@@ -1,6 +1,9 @@
 package commons;
 
 
+import GUI.GamePanel1;
+import GUI.MainFrame;
+
 /**
  * Created by lero on 2020/6/30.
  */
@@ -13,9 +16,17 @@ public class GameConfiguration {
 
     private boolean aoto = false;
     private boolean timing = false;
+    private int mapStep[][];//二维数组
+    private int gameId;
 
-    public GameConfiguration() {
+    public GameConfiguration(GamePanel1 gamePanel1) {
+        gameId = gamePanel1.getChooseNum();
+        initMap();
 
+    }
+
+    public void initMap() {
+        mapStep = GameMap.getMap(gameId);
     }
 
     public GameConfiguration(int baseLength, int gameMode) {
@@ -81,6 +92,22 @@ public class GameConfiguration {
 
     public void setAoto(boolean aoto) {
         this.aoto = aoto;
+    }
+
+    public int[][] getMapStep() {
+        return mapStep;
+    }
+
+    public void setMapStep(int[][] mapStep) {
+        this.mapStep = mapStep;
+    }
+
+    public int getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(int gameId) {
+        this.gameId = gameId;
     }
 
 
