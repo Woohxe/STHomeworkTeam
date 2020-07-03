@@ -135,6 +135,9 @@ public class DragListener extends MouseAdapter {
             if(res==JOptionPane.YES_OPTION){
                 //获取用户名;
                 String userName = JOptionPane.showInputDialog("输出用户名：");
+                if(userName.length()==0){
+                    userName = "游客";
+                }
                 //获取当前关卡编号
                 int gameId = gamePanel.getGamePanel2().getGameStatus().getGameConfiguration().getGameId();
                 try {
