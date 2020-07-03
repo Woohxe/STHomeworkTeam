@@ -5,6 +5,12 @@ import huarongdao.Graph.Edge;
 import huarongdao.Road;
 import huarongdao.Movement;
 
+/**
+  *@Description: 将所有最小化Road（地图所有形态）作为状态节点建图
+  *@Author: lypl
+  *@date: 2020-06-21
+ **/
+  
 public class Build_Graph {
 	final static int R = 5;
 	final static int C = 4;
@@ -19,6 +25,13 @@ public class Build_Graph {
 	static Edge[] E;
 	static Trie T;
 	
+	/**
+	  *@Description: 利用m中的移动信息改变地图上人物的位置
+	  *@Param: a: 地图人物位置描述；m: 移动信息
+	  *@return: 
+	  *@Author: lypl
+	  *@date: 
+	 **/
 	public static void move(int[] a, Movement m) {
 		int pos = m.pos;
 		int bid = a[pos];
@@ -65,8 +78,15 @@ public class Build_Graph {
 		}
 	}
 	
-	//空格10、11,上下是列C，左右是行R
+	/**
+	  *@Description: 判断是否可以移动
+	  *@Param: a: 地图人物位置描述；m: 移动信息
+	  *@return:
+	  *@Author: lypl
+	  *@date:
+	 **/
 	public static boolean can_move(int[] a, Movement m) {
+		//空格10、11,上下是列C，左右是行R
 		int pos = m.pos;
 		int bid = a[pos];
 		int mvid = m.mt;
@@ -95,8 +115,14 @@ public class Build_Graph {
 		}
 		return true;
 	}
-	
-	//xid: road状态 x的编号
+
+	/**
+	  *@Description: 对一个状态节点x连边
+	  *@Param: x: 待连边的Road; xid: Road状态x的编号
+	  *@return:
+	  *@Author: lypl
+	  *@date:
+	 **/
 	static void get_edge(Road x, int xid) {
 		//对每个人物(id)上下左右移动：能移动变成另一种状态就移动（连边）；
 		for(int i = 0; i < MAXID; ++i) {
@@ -122,6 +148,15 @@ public class Build_Graph {
 			}
 		}
 	}
+
+	/**
+	  *@Description: 将所有最小化Road（地图所有形态）作为状态节点建图
+	  *@Param:
+	  *@return:
+	  *@Author: lypl
+	  *@date:
+	 **/
+
 	public static void get_graph() {
 		rd = Valid_Road_Genrator.vrd;
 		rd_cnt = Valid_Road_Genrator.rd_cnt;

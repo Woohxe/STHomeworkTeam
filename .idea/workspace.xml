@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae6837a4-a6fb-4583-a616-4e5c277fa075" name="Default" comment="GUI界面注释">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2020_Spring_GameMod.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="ae6837a4-a6fb-4583-a616-4e5c277fa075" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GamePanel.java" afterPath="$PROJECT_DIR$/src/GUI/GamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GamePanel1.java" afterPath="$PROJECT_DIR$/src/GUI/GamePanel1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GamePanel2.java" afterPath="$PROJECT_DIR$/src/GUI/GamePanel2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/PersonLabel.java" afterPath="$PROJECT_DIR$/src/GUI/PersonLabel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/RankDialog.java" afterPath="$PROJECT_DIR$/src/GUI/RankDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/SidePanel.java" afterPath="$PROJECT_DIR$/src/GUI/SidePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/SidePanel1.java" afterPath="$PROJECT_DIR$/src/GUI/SidePanel1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/SidePanel2.java" afterPath="$PROJECT_DIR$/src/GUI/SidePanel2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commons/GameStatus.java" afterPath="$PROJECT_DIR$/src/commons/GameStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/listener/BeginListener.java" afterPath="$PROJECT_DIR$/src/listener/BeginListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/listener/ChooseListener.java" afterPath="$PROJECT_DIR$/src/listener/ChooseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/listener/DragListener.java" afterPath="$PROJECT_DIR$/src/listener/DragListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/timer/GameTimer.java" afterPath="$PROJECT_DIR$/src/timer/GameTimer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/commons/GameMap.java" afterPath="$PROJECT_DIR$/src/commons/GameMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Blocks.java" afterPath="$PROJECT_DIR$/src/huarongdao/Blocks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Build_Graph.java" afterPath="$PROJECT_DIR$/src/huarongdao/Build_Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Build_Trie.java" afterPath="$PROJECT_DIR$/src/huarongdao/Build_Trie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Escape_Path.java" afterPath="$PROJECT_DIR$/src/huarongdao/Escape_Path.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Graph.java" afterPath="$PROJECT_DIR$/src/huarongdao/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Movement.java" afterPath="$PROJECT_DIR$/src/huarongdao/Movement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Road.java" afterPath="$PROJECT_DIR$/src/huarongdao/Road.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Solver.java" afterPath="$PROJECT_DIR$/src/huarongdao/Solver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Trie.java" afterPath="$PROJECT_DIR$/src/huarongdao/Trie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/huarongdao/Valid_Road_Genrator.java" afterPath="$PROJECT_DIR$/src/huarongdao/Valid_Road_Genrator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,16 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="GameStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/commons/GameStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,32 +39,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CellFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/CellFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/commons/GameConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeginListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BeginListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listener/BeginListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+              <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commons/GameMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding>
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blocks.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/huarongdao/Blocks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GamePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,7 +208,6 @@
         <option value="$PROJECT_DIR$/ValidGraph/graph_0.txt" />
         <option value="$PROJECT_DIR$/ValidGraph/graph_8.txt" />
         <option value="$PROJECT_DIR$/time_mode_xml/0_time_mode.xml" />
-        <option value="$PROJECT_DIR$/src/commons/GameMap.java" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/src/object/Cell.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -227,6 +225,7 @@
         <option value="$PROJECT_DIR$/src/listener/ChooseListener.java" />
         <option value="$PROJECT_DIR$/src/GUI/SidePanel1.java" />
         <option value="$PROJECT_DIR$/src/listener/BeginListener.java" />
+        <option value="$PROJECT_DIR$/src/commons/GameMap.java" />
       </list>
     </option>
   </component>
@@ -355,6 +354,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="huarongdao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STHomeworkTeam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STHomeworkTeam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="GUI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -405,8 +422,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../C语言/STHomeworkTeam-master" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -868,7 +885,7 @@
       <workItem from="1593591284318" duration="495000" />
       <workItem from="1593592003396" duration="10194000" />
       <workItem from="1593606886458" duration="53003000" />
-      <workItem from="1593703163817" duration="20085000" />
+      <workItem from="1593703163817" duration="22452000" />
     </task>
     <task id="LOCAL-00001" summary="完成了基本的游戏模块，游戏结束后的跳转、记录等功能未完成">
       <created>1593590101054</created>
@@ -884,15 +901,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593591357860</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GUI界面注释">
+      <created>1593753343139</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593753343139</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119208000" />
+    <option name="totallyTimeSpent" value="121575000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="0" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -909,7 +932,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22084233" sideWeight="0.49399656" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18412527" sideWeight="0.49399656" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -977,22 +1000,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/object/StepModeRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/StepRecordReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1_time_mode.xml" />
     <entry file="file://$PROJECT_DIR$/ValidGraph/graph_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1015,13 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/huarongdao/Blocks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/huarongdao/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2349">
@@ -1034,6 +1034,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="113" column="36" lean-forward="false" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1206,26 +1207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/commons/GameMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GamePanel1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1357,7 +1338,150 @@
     <entry file="file://$PROJECT_DIR$/src/listener/BeginListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+          <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/GUI.GamePanel">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>GUI.GamePanel</OriginalElement>
+          <nodes>
+            <node x="" y="">javax.swing.JComponent</node>
+            <node x="" y="">GUI.GamePanel</node>
+            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="" y="">java.awt.MenuContainer</node>
+            <node x="" y="">javax.accessibility.Accessible</node>
+            <node x="" y="">java.awt.Container</node>
+            <node x="" y="">java.awt.Component</node>
+            <node x="" y="">javax.swing.JPanel</node>
+            <node x="" y="">java.awt.image.ImageObserver</node>
+            <node x="" y="">java.io.Serializable</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8" x="4585.375" y="18879.273715544077" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">xsdcomplex</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">ElementScannerTest</node>
+            <node x="" y="">ElementScannerTest.Spy</node>
+            <node x="" y="">listener</node>
+            <node x="" y="">TestIds</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">commons</node>
+            <node x="" y="">DOMBuilder</node>
+            <node x="" y="">index-files</node>
+            <node x="" y="">timer</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">utils</node>
+            <node x="" y="">GUI</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">image</node>
+            <node x="" y="">factory</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">resources</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">huarongdao</node>
+            <node x="" y="">service</node>
+            <node x="" y="">Main</node>
+            <node x="" y="">object</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.497787610619469" x="418.7155555555555" y="262.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/GUI">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>GUI</OriginalElement>
+          <nodes>
+            <node x="" y="">GUI.GamePanel</node>
+            <node x="" y="">GUI.PersonLabel</node>
+            <node x="" y="">GUI.RankDialog</node>
+            <node x="" y="">GUI.SidePanel2</node>
+            <node x="" y="">GUI.GamePanel1</node>
+            <node x="" y="">GUI.MainFrame</node>
+            <node x="" y="">GUI.GamePanel2</node>
+            <node x="" y="">GUI.SidePanel1</node>
+            <node x="" y="">GUI.GamePanel1.RadioButtonListener</node>
+            <node x="" y="">GUI.SidePanel1.UpdateTask</node>
+            <node x="" y="">GUI.SidePanel</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7116650987770461" x="724.8476900323675" y="1390.9444949130484" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commons/GameMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huarongdao/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
