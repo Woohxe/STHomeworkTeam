@@ -50,5 +50,4 @@ public class TimeRecordReaderTest {
             //System.out.println(records[i]);
         }
     }
-
 }
