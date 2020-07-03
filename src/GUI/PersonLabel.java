@@ -7,15 +7,23 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by lero on 2020/6/30.
+ * 实现人物块形状的初始化设置
  */
 public class PersonLabel extends JLabel{
+    //矩形块
     private Cell cell;
+    //人物块的形状
     private Icon icon;
+
+    /**
+     * 构造方法，根据矩形块生成对应人物块
+     * @param cell
+     */
     public PersonLabel(Cell cell) {
         this.cell = cell;
         int num = cell.getNum();
         Color color;
+        //根据人物块编号设置相应颜色
         if(num == 0) {
             color = new Color(255, 93, 100);
         }
@@ -30,6 +38,15 @@ public class PersonLabel extends JLabel{
         }
         icon = new IconCreator(cell.getX(), cell.getY(),
                 cell.getWidth(), cell.getHeight(), color);
+    }
+
+    /**
+     * 判断当前人物块与另一人物块是否有交叠
+     * @param personLabel
+     * @return
+     */
+    public boolean isIntercted(PersonLabel personLabel) {
+        return cell.isIntersected(personLabel.getCell());
     }
 
     public Cell getCell() {
@@ -115,9 +132,6 @@ public class PersonLabel extends JLabel{
         this.icon = icon;
     }
 
-    public boolean isIntercted(PersonLabel personLabel) {
-        return cell.isIntersected(personLabel.getCell());
-    }
 
     public void moveX(int d) {
         cell.moveX(d);

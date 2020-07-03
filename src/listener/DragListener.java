@@ -27,7 +27,7 @@ public class DragListener extends MouseAdapter {
     private PersonLabel dragLabel;
     //游戏状态
     private GameStatus gameStatus;
-    //游戏面板
+    //游戏区框架
     private GamePanel gamePanel;
     //主游戏框架
     private MainFrame mainFrame;
@@ -35,7 +35,7 @@ public class DragListener extends MouseAdapter {
     private GameTimer gameTimer;
     //拖拽点的坐标
     private Point point = new Point(0,0);
-    //游戏状态中各矩形块的数组，目的是为了获取各个快的逻辑坐标
+    //游戏状态中各矩形块的数组，目的是为了获取各个块的逻辑坐标
     private Cell[] cells;
     //记录该块是否已经移动，防止重复触发的情况发生
     private boolean hasMoved;

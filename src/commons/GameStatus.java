@@ -4,16 +4,26 @@ import factory.CellFactory;
 import object.Cell;
 
 /**
- * Created by lero on 2020/6/30.
+ * 当前地图状态
  */
 public class GameStatus {
+    //当前游戏配置
     private GameConfiguration gameConfiguration;
+    //相应人物块的矩形块
     private Cell[] cells;
+    //获取步数
     private int step;
+    //矩形块的工厂类
     private CellFactory cellFactory;
+    //判断游戏输赢状态
     private boolean win;
-    private int mapStep[][];//二维数组
+    //二维数组
+    private int mapStep[][];
 
+    /**
+     * 构造方法
+     * @param gameConfiguration
+     */
     public GameStatus(GameConfiguration gameConfiguration) {
         this.gameConfiguration = gameConfiguration;
         this.mapStep = gameConfiguration.getMapStep();
@@ -26,9 +36,13 @@ public class GameStatus {
 
     }
 
+    /**
+     * 根据配置构造相应矩形块
+     */
     public void initPanel() {
         int baseLength = gameConfiguration.getBaseLength();
-        int flag[]=new int[10];//当前块是否已被绘制
+        //判断当前块是否已被绘制
+        int flag[]=new int[10];
         for(int i = 0; i < 10; i++) {
             flag[i] = 0;
         }
@@ -136,6 +150,7 @@ public class GameStatus {
 
     public void setMapStep(int[][] mapStep) {
         this.mapStep = mapStep;
+        //根据当前地图选择刷新界面
         initPanel();
     }
 

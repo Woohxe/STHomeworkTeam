@@ -7,34 +7,39 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by lero on 2020/6/30.
+ * 游戏区框架，实现关卡选择与游戏操作两个界面的初始化
  */
 public class GamePanel extends JPanel{
+    //关卡选择界面
     private GamePanel1 gamePanel1;
+    //游戏操作界面
     private GamePanel2 gamePanel2;
+    //主游戏框架
     private MainFrame mainFrame;
+    //游戏状态
     private GameStatus gameStatus;
-    private JButton go;
-    public int BASELENGTH = 150; // 单位块长度
+    // 块单位长度
+    private int BASELENGTH = 150;
 
-    public int getBASELENGTH() {
-        return BASELENGTH;
-    }
+    /**
+     * 构造方法，传入主游戏框架，初始化游戏区框架
+     * @param mainFrame1
+     */
+    public GamePanel(MainFrame mainFrame1){
+        mainFrame = mainFrame1;
+        this.setPreferredSize(new Dimension(BASELENGTH*4+20,BASELENGTH*5+50));
+        this.setBackground(new Color(198, 241, 245));
+        this.setLayout(null);
 
-    public void setBASELENGTH(int BASELENGTH) {
-        this.BASELENGTH = BASELENGTH;
-    }
-
-    public MainFrame getMainFrame() {
-        return (MainFrame) this.getParent();
-    }
-
-    public GameStatus getGameStatus() {
-        return gameStatus;
-    }
-
-    public void setGameStatus(GameStatus gameStatus) {
-        this.gameStatus = gameStatus;
+        gamePanel1 = new GamePanel1(this,mainFrame);
+        gameStatus = new GameStatus(new GameConfiguration(gamePanel1));
+        gamePanel2 = new GamePanel2(this,mainFrame,gameStatus);
+        gamePanel1.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
+        gamePanel2.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
+        this.add(gamePanel1);
+        this.add(gamePanel2);
+        gamePanel1.setEnabled(true);
+        this.setVisible(true);
     }
 
     public GamePanel1 getGamePanel1() {
@@ -53,22 +58,24 @@ public class GamePanel extends JPanel{
         this.gamePanel2 = gamePanel2;
     }
 
-
-    public GamePanel(MainFrame mainFrame1){
-        mainFrame = mainFrame1;
-        this.setPreferredSize(new Dimension(BASELENGTH*4+20,BASELENGTH*5+50));
-        this.setBackground(new Color(198, 241, 245));
-        this.setLayout(null);
-
-        gamePanel1 = new GamePanel1(this,mainFrame);
-        gameStatus = new GameStatus(new GameConfiguration(gamePanel1));
-        gamePanel2 = new GamePanel2(this,mainFrame,gameStatus);
-        gamePanel1.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
-        gamePanel2.setBounds(0,0,BASELENGTH*4+20,BASELENGTH*5+50);
-        this.add(gamePanel1);
-        gamePanel1.setEnabled(true);
-        this.add(gamePanel2);
-        this.setVisible(true);
-
+    public MainFrame getMainFrame() {
+        return (MainFrame) this.getParent();
     }
+
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
+    }
+
+    public int getBASELENGTH() {
+        return BASELENGTH;
+    }
+
+    public void setBASELENGTH(int BASELENGTH) {
+        this.BASELENGTH = BASELENGTH;
+    }
+
 }
